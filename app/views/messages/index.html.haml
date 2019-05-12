@@ -6,50 +6,48 @@
       %p.side-header__user-name test1
       %ul.user-menu
         %li.user-menu__edit-user
-          %a{:href => ""}
+          = link_to "" do
             %i.fa.fa-edit
         %li.user-menu__new-group
-          %a{:href => ""}
+          = link_to "" do
             %i.fa.fa-cog
     .groups
-      %a{:href => ""}
+      = link_to "" do
         .group
           %p.group__group-name test1
           %p.group__latest-message whats up
   .chat-main
     .main-header
-      .current-group{"data-group_id" => "496"}
+      .current-group
         %h2.current-group__name test1
         %ul.member-list
           Member：
           %li.member-list__member test
           %li.member-list__member testtest
           %li.member-list__member test1
-      %a{:href => ""}
+      =link_to "" do
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id" => "1135"}
+      .message
         .upper-info
           %p.upper-info__user test1
           %p.upper-info__date 2019/04/14(Sun) 12:34:38
         %p.message__text whats up
-      .message{"data-message_id" => "2125"}
+      .message
         .upper-info
           %p.upper-info__user test1
           %p.upper-info__date 2019/04/30(Tue) 17:30:30
         %p.message__text whats upupup
-      .message{"data-message_id" => "2954"}
+      .message
         .upper-info
           %p.upper-info__user test1
           %p.upper-info__date 2019/05/11(Sat) 13:06:21
         %p.message__text whats up
     .form
-      %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "Sc98SFadx0ZK8fHCvg+pXxJlls2CwS7S2pAkEEwIP6RaQcto76zvaNtLJP8n5ozhoHdeowrRV0RmJwiJQii9jA=="}/
+      %form#new_message.new-message
         .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.image-label{:for => "message_image"}
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+          %label.image-label{for: "message_image"}
             %i.fa.fa-image
-            %input#message_image.image-label__input{:name => "message[image]", :type => "file"}/
-        %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+            %input#message_image.image-label__input{name: "message[image]", type: "file"}/
+        %input.new-message__submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
