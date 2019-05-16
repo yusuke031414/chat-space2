@@ -1,21 +1,5 @@
-.alert-box
-  .alert グループを編集しました
 .wrapper
-  .chat-side
-    .side-header
-      %p.side-header__user-name test1
-      %ul.user-menu
-        %li.user-menu__edit-user
-          = link_to "" do
-            %i.fa.fa-edit
-        %li.user-menu__new-group
-          = link_to "" do
-            %i.fa.fa-cog
-    .groups
-      = link_to "" do
-        .group
-          %p.group__group-name test1
-          %p.group__latest-message whats up
+  =render'side_bar' 
   .chat-main
     .main-header
       .current-group
